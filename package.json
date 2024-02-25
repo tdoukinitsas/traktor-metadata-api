@@ -1,0 +1,33 @@
+{
+  "name": "traktor-metadata-api",
+  "version": "1.0.0",
+  "description": "A utility that creates end endpoint in which you can read the current track metadata from Traktor. Used in combination with https://github.com/ErikMinekus/traktor-api-client",
+  "main": "index.js",
+  "scripts": {
+    "start-desktop": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make-mac": "electron-forge make --platform darwin",
+    "make-win": "electron-forge make --platform win32",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "traktor",
+    "metadata",
+    "id",
+    "icecast"
+  ],
+  "author": "Thomas Doukinitsas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "electron": "^29.0.1",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "socket.io": "^4.7.4"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traktor Metadata API Server</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.svg">
+    <meta name="theme-color" content="#070D24" />
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-title">Traktor Metadata API Client</div>
+        <div class="nav">
+           <ul>test</ul>
+        </div>
+    </div>
+    <div class="header-buffer"></div>
+
+    <div class="category">
+        <div class="category-options">
+            <div class="category-group">
+                Track ID api page: http://localhost:8080/api
+            </div>
+        </div>
+        <iframe id="apiframe" src="http://localhost:8080/api"></iframe>
+    </div>
+
+    <div class="footer-buffer"></div>
+    <div class="footer">
+        <div class="info">Developed by Thomas Doykinitsas | thomas@creativityfilms.gr | www.doukinitsas.info</div>
+        <div class="console" id="consoleText">Please start playing music in Traktor using the modified D2 controller</div>
+    </div>
+
+
+    <script>
+        setInterval(() => {
+            document.getElementById('apiframe').contentWindow.location.reload();
+        },5000)
+    </script>
+
+</html>
