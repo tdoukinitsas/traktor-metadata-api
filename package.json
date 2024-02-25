@@ -22,12 +22,35 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "electron": "^29.0.1",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "path": "^0.12.7",
     "request": "^2.88.2",
     "socket.io": "^4.7.4"
-  }
+  },
+  "devDependencies": {
+    "@angablue/exe": "^1.2.0",
+    "@electron-forge/cli": "latest",
+    "@electron-forge/maker-deb": "latest",
+    "@electron-forge/maker-rpm": "latest",
+    "@electron-forge/maker-squirrel": "latest",
+    "@electron-forge/maker-zip": "latest",
+    "@rabbitholesyndrome/electron-forge-maker-portable": "^0.2.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "pkg": "latest"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "assets/favicon"
+      },
+      "makers": [
+        {
+          "name": "@rabbitholesyndrome/electron-forge-maker-portable"
+        }
+      ]
+    }
+}
 }
